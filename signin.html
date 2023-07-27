@@ -1,0 +1,12 @@
+<h2>Sign In</h2>
+<form method="post">
+  <input type="email" name="userEmailSI" required>
+  <input type="password" name="userPasswdSI" required>
+  <input type="submit" name="SignIn" value="Sign In">
+</form>
+<span>Do not have an account? <a href="/signup">Sign up!</a></span>
+
+<% if (error && type === 'usernotfound') { %>
+  <p>Existe erro no login</p>
+  <script src="../public/scripts/sign-in-up-error.js"></script>
+<% } %>

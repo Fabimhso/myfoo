@@ -1,0 +1,23 @@
+<h2>Sign Up</h2>
+<form method="post">
+  <input type="text" name="userNameSU">
+  <input type="email" name="userEmailSU">
+  <input type="password" name="userPasswdSU">
+  <input type="submit" name="SignUp" value="Sign Up">
+</form>
+<span>Already have an account? <a href="/signin">Sign in!</a></span>
+
+<% if (error) { %>
+  <% if (type === 'noname') { %>
+    <p>Erro: "Nome" não foi passado no formulário.</p>
+  <% } else if (type === 'noemail') { %>
+    <p>Erro: "Email" não foi passado no formulário.</p>
+  <% } else if (type === 'nopasswd') { %>
+    <p>Erro: "Senha" não foi passado no formulário.</p>
+  <% } else if (type === 'useralreadyexists') { %>
+    <p>Erro: Usuário já existe</p>
+  <% } else if (type === 'unknowerror') { %>
+    <p>Erro desconhecido. Tente novamente mais tarde.</p>  
+  <% } %>
+  <script src="../public/scripts/sign-in-up-error.js"></script>
+<% } %>
